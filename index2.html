@@ -25,6 +25,9 @@
         <li>
           <a href="#sub">Third sub heading</a>
         </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -100,76 +103,189 @@
       </address>
 
     </article>
+
+    <!-- Use the key 'Ctrl + U' for seeing the source of the html of web page -->
+    <hr>
+    <!-- using 'li' tag which is list  -->
+    <!-- and makeing them in 'ol' tag ordered list, without 'ol' all the list have dot at the beginnig.-->
+    <dl>
+      <!-- Here 'dl' tag is description list different from ordered list -->
+      <dt>
+        New topic:
+        <!-- This 'dt' tag is description term act as side heading for a point -->
+      </dt>
+      <dd>
+        About the description topic to the paragram or point wise statements
+      </dd>
+      <!-- This 'dd' description details tag add details to the above term -->
+      <dt>Day:</dt>
+      <dd>today is monday</dd>
+    </dl>
+    <br>This is my daily routine form morning to night.
+    <article>
+      <h4> schedule Tabel</h4>
+      <table>
+        <!--In 'table' Every data should be in 'tr' tabel row . Every table has thead, tbody, tfooter -->
+        <caption>This is my daily schedule</caption>
+        <thead>
+          <tr>
+            <th>S.no</th>
+            <th>peroid</th>
+            <!-- 'th'  is table header-->
+            <th>work</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.</td>
+            <td>
+              <!-- 'td' is table data-->
+              Morning to Evening
+            </td>
+            <td>In the College </td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td>
+              Evening to MidNight
+            </td>
+            <td>
+              College work + Respective cources
+            </td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>
+              Midnight to Morning
+            </td>
+            <td>
+              Sleep
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">
+              This is what i everyday do in college life.
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </article>
+    <hr>
+    <article id="contact">
+      <form action="http://httpbin.org/get" target="_blank" method="get">
+        <fieldset>
+          <!-- 'fieldset' make separate field with in the form-->
+          <legend>Personal Details</legend>
+          <!-- 'legend' like comment of caption -->
+          <h5>Contact Me </h5>
+          <p>For reach out for me.</p>
+          <!-- Here 'form' location for gathering the information which is Entered in the form -->
+          <p>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName" placeholder="kalyan" required autocomplete="on"
+              autofocus>
+            <!-- 'placeholder' for the showing the text on the input field -->
+            <!-- 'required' is for the input is compulsory before submit -->
+            <!-- 'autocomplete' for autocompleting and recomendation of previous input -->
+            <!-- 'autofocus' for direct input cursor when page entered only have one per page -->
+            <!-- 'type' what kind of input is for -->
+          </p>
+          <p>
+            <label for="latName">Last Name:</label>
+            <input type="text" name="latName" id="latName" placeholder="kumar" required autocomplete="on">
+          </p>
+          <p>
+            <label for="password">password:</label>
+            <input type="password" name="password" id="password" required placeholder="Secret">
+            <!-- here type is password -->
+          </p>
+          <p>
+            <label for="phone">phone:</label>
+            <input type="tel" name="phone" id="phone" required placeholder="123457890" pattern="[0-9]{10}"
+              autocomplete="on">
+          </p>
+          <p>
+            <label for="DateofBirth">Date of Birth:</label>
+            <input type="number" name="DateofBirth" id="DateofBirth" min="1990" max="2023" value="2003" required>
+            <!-- 'value' which already selected in the field -->
+          </p>
+          <p>
+            <label for="stream">Stream(Branch):</label>
+            <select name="stream" id="stream">
+              <optgroup label="Computer science And Engineering">
+                <option value="CSE">CSE</option>
+                <option value="Data science">CSE(DS)</option>
+                <option value="AI & ML">CSE(AIML)</option>
+              </optgroup>
+              <optgroup label="MTech">
+                <option value="ME">Manufacturing Engineering</option>
+                <option value="Robo">Robotics</option>
+                <option value="MT">Mechatronics</option>
+                <option value="AE">Automobile Engineering</option>
+              </optgroup>
+              <option value="other">Others</option>
+            </select>
+
+            <!-- Alt+shift+A for blocl comment -->
+
+            <!--  <label for="stream">Stream(Branch)</label>
+          <input type="text" name="stream" id="stream" list="Streamlist">
+          <datalist id="Streamlist">
+            <option value="CSE">
+            <option value="CSE(DS)">
+            <option value="CSE(AIML)">
+            <option value="Robotics">
+            <option value="Others">
+          </datalist> -->
+        </fieldset>
+        <fieldset>
+          <legend>Which language do you like?</legend>
+          <p>
+            <input type="checkbox" name="language" id="htMl">
+            <label for="htMl">HTML</label>
+          </p>
+          <p>
+            <input type="checkbox" name="language" id="css">
+            <label for="css">CSS</label>
+          </p>
+          <p>
+            <input type="checkbox" name="language" id="js">
+            <label for="js">JavaScript</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>WHich Job do you prefer?</legend>
+          <p>
+            <input type="radio" name="Job" id="WebDev">
+            <label for="WebDev">Web Development</label>
+          </p>
+          <p>
+            <input type="radio" name="Job" id="DaSec">
+            <label for="DaSec">Data Science</label>
+          </p>
+          <p>
+            <input type="radio" name="Job" id="security">
+            <label for="security">Offensive Security</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>You can send me Message</legend>
+          <label for="Message">Your Message!</label>
+          <br>
+          <textarea name="message" id="Message" cols="30" rows="10" placeholder="Write your message">
+        </textarea>
+        </fieldset>
+        <br>
+        <button type="submit">Submit</button>
+        <button type="submit" formaction="http://httpbin.org/post" formmethod="post">Post</button>
+        <!-- "post"  method is more safe than get-->
+        <!-- 'get' method will show all the data in the url -->
+        <button type="reset">Reset</button>
+      </form>
+    </article>
   </main>
-  <!-- Use the key 'Ctrl + U' for seeing the source of the html of web page -->
-  <hr>
-  <!-- using 'li' tag which is list  -->
-  <!-- and makeing them in 'ol' tag ordered list, without 'ol' all the list have dot at the beginnig.-->
-  <dl>
-    <!-- Here 'dl' tag is description list different from ordered list -->
-    <dt>
-      New topic:
-      <!-- This 'dt' tag is description term act as side heading for a point -->
-    </dt>
-    <dd>
-      About the description topic to the paragram or point wise statements
-    </dd>
-    <!-- This 'dd' description details tag add details to the above term -->
-    <dt>Day:</dt>
-    <dd>today is monday</dd>
-  </dl>
-  <br>This is my daily routine form morning to night.
-  <article>
-    <h4> schedule Tabel</h4>
-    <table>
-      <!--In 'table' Every data should be in 'tr' tabel row . Every table has thead, tbody, tfooter -->
-      <caption>This is my daily schedule</caption>
-      <thead>
-        <tr>
-          <th>S.no</th>
-          <th>peroid</th>
-          <!-- 'th'  is table header-->
-          <th>work</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1.</td>
-          <td>
-            <!-- 'td' is table data-->
-            Morning to Evening
-          </td>
-          <td>In the College </td>
-        </tr>
-        <tr>
-          <td>2.</td>
-          <td>
-            Evening to MidNight
-          </td>
-          <td>
-            College work + Respective cources
-          </td>
-        </tr>
-        <tr>
-          <td>3.</td>
-          <td>
-            Midnight to Morning
-          </td>
-          <td>
-            Sleep
-          </td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3">
-            This is what i everyday do in everyday in college life.
-          </td>
-        </tr>
-      </tfoot>
-    </table>
-  </article>
-  <hr>
   <!--  chapte 5 - adding links -->
 
   <!-- link can be added the 'abbr' tag for the acronym with anchor tag 'a' -->
@@ -182,8 +298,6 @@
       <a href="#">Back to top</a>
     </p>
   </footer>
-
-
 
 </body>
 
